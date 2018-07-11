@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html>
+
+    <head>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js'></script>
+
+        <script>
+
+            var socket = io('http://localhost:3000/custom-namespace');
+
+            socket.on('news', function(data) { 
+                console.log(data);
+            });
+
+            
+
+            socket.on('error', console.error.bind(console));
+
+        </script>
+
+    </head>
+
+    <body>
+
+    </body>
+
+</html>
